@@ -1,0 +1,6 @@
+[package]
+name = "rust-tuto"
+version = "0.1.0"
+authors = ["Cedric Leroy"]
+
+[dependencies]
