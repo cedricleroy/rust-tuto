@@ -70,6 +70,8 @@ fn main() {
     let (_a, _b, _c, _d) = tup;
     // function
     my_function(43);
+    // call json fct
+    json();
     // references
     let mut gg = 10;
     let ggg = &mut gg;  // mutable reference
@@ -86,8 +88,27 @@ fn main() {
     struct ColorTuple(u8, u8, u8);
     let color = ColorTuple(255, 0, 0);
     println!("{} {} {}", color.0, color.1, color.2);
-    // call json fct
-    json();
+    // arrays
+    let numbers: [i32; 5] = [1, 2, 3, 4, 5];
+    println!("{}", numbers[2]);
+    for n in numbers.iter() {
+        println!("{}", n);
+    }
+    for i in 0..numbers.len() {
+        println!("{}", numbers[i]);
+    }
+    // implementations (methods)
+    struct Rectangle {
+        width: u32,
+        height: u32
+    }
+    impl Rectangle {
+        fn print_description(&self) {
+            println!("Rectangle {} {}", self.width, self.height);
+        }
+    }
+    let my_rect = Rectangle { width: 10, height: 5 };
+    my_rect.print_description();
 }
 
 fn my_function(num: u32) -> bool {
