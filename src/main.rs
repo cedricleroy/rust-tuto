@@ -88,7 +88,7 @@ fn main() {
     struct ColorTuple(u8, u8, u8);
     let color = ColorTuple(255, 0, 0);
     println!("{} {} {}", color.0, color.1, color.2);
-    // arrays
+    // arrays (fixed size)
     let numbers: [i32; 5] = [1, 2, 3, 4, 5];
     println!("{}", numbers[2]);
     for n in numbers.iter() {
@@ -109,6 +109,14 @@ fn main() {
     }
     let my_rect = Rectangle { width: 10, height: 5 };
     my_rect.print_description();
+    // strings
+    let mut my_string = String::from("Hey, this is a string");
+    println!("len {}", my_string.len());
+    for word in my_string.split_whitespace() {
+        println!("{}", word);
+    }
+    println!("{}", my_string.contains("Hey"));
+    my_string.push_str("...");
 }
 
 fn my_function(num: u32) -> bool {
