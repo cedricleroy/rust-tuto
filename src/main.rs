@@ -117,6 +117,10 @@ fn main() {
     }
     println!("{}", my_string.contains("Hey"));
     my_string.push_str("...");
+    // vectors
+    let mut my_vector = vec![1, 2, 3, 4];
+    my_vector.push(49);
+    my_vector.remove(1); // index
 }
 
 fn my_function(num: u32) -> bool {
