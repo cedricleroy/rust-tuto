@@ -6,7 +6,7 @@ use std::io::Read;
 use serde_json::Value;
 
 
-fn main() {
+pub fn json() {
     let mut file = File::open("sample.json").expect("file not found");
     let mut content = String::new();
     file.read_to_string(&mut content);
